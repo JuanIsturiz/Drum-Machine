@@ -1,0 +1,31 @@
+.drum-container {
+  display: flex;
+  flex-direction: column;
+  width: 34rem;
+  padding: .25rem;
+  border: .25rem solid;
+}
+
+.my-name>p {
+  font-size: .75rem;
+  color: #ddd;
+  float: right;
+  margin-bottom: .25rem;
+}
+
+.drum {
+  display: grid;
+  grid: 1fr / 1.15fr 1fr;
+  gap: 1rem;
+  margin: 0 1rem;
+}
+
+@media only screen and (max-width: 580px) {
+  .drum-container {
+    width: 80%;
+  }
+
+  .drum {
+    grid: 1.15fr 1fr / 1fr;
+  }
+}

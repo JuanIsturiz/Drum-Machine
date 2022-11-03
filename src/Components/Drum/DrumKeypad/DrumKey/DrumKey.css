@@ -1,0 +1,11 @@
+.key {
+  cursor: pointer;
+  min-height: 4rem;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  background-color: #eb5e28;
+  border-radius: .25rem;
+  box-shadow: black 3px 3px 5px;
+  transition: all 50ms linear;
+}

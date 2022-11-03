@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Drum from "./Components/Drum/Drum";
 
 function App() {
+  //state for the color
+  const [color, setColor] = useState(false);
+
+  //function that changes color palettes
+  const handleColor = () => setColor(!color);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      className="App"
+      style={{ backgroundColor: !color ? "#555" : "#8fb996" }}
+    >
+      <Drum color={color} onColor={handleColor} />
     </div>
   );
 }
